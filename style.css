@@ -412,14 +412,16 @@ width: 40%;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
-    gap: 300px;
+    gap: 220px;
 }
 .projects .project_box img{
-    width: 45%;
+    width: 50%;
+    border-radius: 15px;
 }
 .projects .project_box .text{
-    margin-left: 100px;
+    margin-left: 20px;
     width: calc(51% - 100px);
+    
 
 }
 .projects .project_box .text h4{
@@ -437,7 +439,7 @@ width: 40%;
     color: var(--main-color);
 }
 .projects .project_box .text p{
-    margin: 30px 0 50px;
+    margin: 25px 0 30px;
     line-height: 1.8;
 }
 .projects .project_box .text .link{
@@ -459,6 +461,7 @@ width: 40%;
 }
 .projects .project_box.project_box2{
     flex-direction: row-reverse;
+    line-height: 1.2;
 }
 
 /* From Uiverse.io by nima-mollazadeh */ 
@@ -1069,9 +1072,11 @@ header .links .logo,
     padding: 10px 0;   /* نقلل البادينج */
     margin-bottom: 15px;
     }
-    .projects{
+    .projects {
         padding-bottom: 0;
+        
     }
+    
     
     
     .contact{
