@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portefolio | Yousef</title>
-    <link rel="icon" href="img/logo_icon.png">
+    <link rel="icon" href="img/icon.png">
     <!-- File CSS -->
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -23,17 +23,22 @@
     <header>
         <nav class="container">
             <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-            <div class="links">
+            <div class="links" id="links">
+                <span class="close_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"></i></span>
+
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
                 <a class="active" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">services</a>
-                <a href="#">project</a>
-                <a href="#">Contact</a>
+                <a href="#about">About</a>
+                <a href="#services">services</a>
+                <a href="#projects">projects</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <span class="icons_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
+
             </div>
         </nav>
     </header>
@@ -42,13 +47,13 @@
         <div class="container">
             <div class="div_Text">
                 <h4>Hello, I'm </h4>
-                <h1><span>Yousef A.</span></h1>
+                <h1><span>Yousef Elgendy.</span></h1>
                 <h2>Web Developer</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Necessitatibus distinctio asperiores qui rem beatae officia!</p>
+                <p>I'm a passionate web developer creating modern and responsive websites
+                   that help businesses grow and individuals showcase their skills online.</p>
                 <div class="btns">
                     <a href="#" class="btn">Hire Me</a>
-                    <a href="#" class="btn_no_bg">Download CV</a>
+                    <a href="pdf/cv_template_15.pdf" class="btn_no_bg" download="">Download CV</a>
                 </div>      
             </div>
             <div class="div_img">
@@ -57,17 +62,16 @@
             </div>
     </div>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="div_text">
                 <h5>about me</h5>
 
                 <h2><span>I'm a Developer</span></h2>
-                <h4>I Devlop Application that help People</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                   Neque saepe sint voluptate, totam nobis asperiores repellendus rem maxime hic,
-                     inventore veniam reiciendis iure at excepturi.</p>
-
+                <h4>I Build Responsive Websites and Digital Experiences</h4>
+                <p>My goal is to transform ideas into fully functional websites with
+                     clean code and modern design standards.
+                    </p>
              <ul>
                 <li><i class="fa-solid fa-check"></i> Front-End Development</li>
 
@@ -78,16 +82,16 @@
                 <li><i class="fa-solid fa-check"></i> Custom Web Solutions</li>
             </ul>  
             
-            <a href="#" class="btn">Download CV</a>
+            <a href="pdf/cv_template_15.pdf" class="btn" download="">Download CV</a>
             </div>
             <div class="div_img1">
-                <img src="img/about.jpg" alt="">
+                <img src="img/about.png" alt="">
             </div>
         </div>
     </section>
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="top_section">
                 <h2>Our <span>Services</span></h2>
@@ -97,80 +101,252 @@
                 <div class="box">
                     <i class="fa-solid fa-pen-ruler"></i>
                     <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet,
-                         consectetur adipisicing elit.
-                         Fuga omnis dolore illum reprehenderit
-                          ullam explicabo.</p>
-                         <a href="#" class="btn">Read More</a>
-                </div>
+                    <p>I create visually appealing websites with responsive layouts and... 
+                    <span class="text_more">
+                    intuitive navigation,ensuring a seamless experience across all devices.
+                    </span>
+                    </p>
+                    <!-- <a href="#"  class="btn" >Read More</a> -->
+                    <button class="read-more-btn btn" >Read More</button>
+
+                 </div>
                 
                 <div class="box">
                     <i class="fa-solid fa-rocket"></i>
                     <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet,
-                         consectetur adipisicing elit.
-                         Fuga omnis dolore illum reprehenderit
-                          ullam explicabo.</p>
-                         <a href="#" class="btn">Read More</a>
+                    <p>I build fast and scalable web applications using modern technologies,...
+                         <span class="text_more">
+                            tailored to meet business needs and user expectations.
+                         </span>
+                        </p>
+                    <button class="read-more-btn btn" >Read More</button>
                 </div>
 
                 <div class="box">
                     <i class="fa-solid fa-code"></i>
                     <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur 
-                        adipisicing elit.
-                         Fuga omnis dolore illum reprehenderit
-                          ullam explicabo.</p>
-                         <a href="#" class="btn">Read More</a>
+                    <p>Custom coding solutions for unique requirements, from interactive features to...
+                        <span class="text_more">
+                           backend integrations, all optimized for performance.
+                        </span> 
+                    </p>
+                    <button class="read-more-btn btn" >Read More</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="top_section">
                 <h2>Explore my popular <span>Projects</span></h2>
             </div>
             <!-- project -->
              <div class="project_box">
-                <img src="img/project1.jpg" alt="">
+                <img src="img/project1.png" alt="">
                 <div class="text">
                     <h4><span>Product Disign</span></h4>
 
-                    <h3><a href="#">Website Makeup Disign</a></h3>
-                    <p>Lorem ipsum dolor sit amet
-                         consectetur adipisicing elit.
-                         Doloribus commodi ab 
-                         cupiditate.</p>
-                         <a href="#" class="link"><i class="fa-solid
+                    <h3><a href="Rtey/index.html">Website Login/Register Disign</a></h3>
+                    <p>A sleek and responsive login interface that combines modern design with intuitive usability,
+                         allowing users to securely access their accounts with ease and confidence.</p>
+                         <a href="Rtey/index.html" class="link"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
              </div>
 
              <div class="project_box project_box2">
-                <img src="img/project2.jpg" alt="">
+                <img src="img/Landing.png" alt="">
                 <div class="text">
                     <h4><span>Product Disign</span></h4>
 
-                    <h3><a href="#">Website Makeup Disign</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Doloribus commodi ab 
-                         cupiditate.</p>
-                         <a href="#" class="link"><i class="fa-solid
+                    <h3><a href="Landing Page/index.html">Website Landing page Disign</a></h3>
+                    <p>A simple landing page will be developed soon.</p>
+                         <a href="Landing Page/index.html" class="link"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
              </div>
 
              <div class="project_box">
-                <img src="img/project3.jpg" alt="">
+                <!-- From Uiverse.io by nima-mollazadeh --> 
+                    <svg
+                    aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
+                    role="img"
+                    height="56px"
+                    width="56px"
+                    viewBox="0 0 56 56"
+                    class="loader"
+                    >
+                    <clipPath id="sand-mound-top">
+                        <path
+                        d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z"
+                        class="loader__sand-mound-top"
+                        ></path>
+                    </clipPath>
+                    <clipPath id="sand-mound-bottom">
+                        <path
+                        d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z"
+                        class="loader__sand-mound-bottom"
+                        ></path>
+                    </clipPath>
+                    <g transform="translate(2,2)">
+                        <g
+                        transform="rotate(-90,26,26)"
+                        stroke-linecap="round"
+                        stroke-dashoffset="153.94"
+                        stroke-dasharray="153.94 153.94"
+                        stroke="hsl(0,0%,100%)"
+                        fill="none"
+                        >
+                        <circle
+                            transform="rotate(0,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="2.5"
+                            class="loader__motion-thick"
+                        ></circle>
+                        <circle
+                            transform="rotate(90,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="1.75"
+                            class="loader__motion-medium"
+                        ></circle>
+                        <circle
+                            transform="rotate(180,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="1"
+                            class="loader__motion-thin"
+                        ></circle>
+                        </g>
+                        <g transform="translate(13.75,9.25)" class="loader__model">
+                        <path
+                            d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z"
+                            fill="hsl(var(--hue),90%,85%)"
+                        ></path>
+
+                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
+                            <line
+                            y2="20.75"
+                            x2="12"
+                            y1="15.75"
+                            x1="12"
+                            stroke-dasharray="0.25 33.75"
+                            stroke-width="1"
+                            class="loader__sand-grain-left"
+                            ></line>
+                            <line
+                            y2="21.75"
+                            x2="12.5"
+                            y1="16.75"
+                            x1="12.5"
+                            stroke-dasharray="0.25 33.75"
+                            stroke-width="1"
+                            class="loader__sand-grain-right"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.25"
+                            y1="18"
+                            x1="12.25"
+                            stroke-dasharray="0.5 107.5"
+                            stroke-width="1"
+                            class="loader__sand-drop"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.25"
+                            y1="14.75"
+                            x1="12.25"
+                            stroke-dasharray="54 54"
+                            stroke-width="1.5"
+                            class="loader__sand-fill"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12"
+                            y1="16"
+                            x1="12"
+                            stroke-dasharray="1 107"
+                            stroke-width="1"
+                            stroke="hsl(35,90%,83%)"
+                            class="loader__sand-line-left"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.5"
+                            y1="16"
+                            x1="12.5"
+                            stroke-dasharray="12 96"
+                            stroke-width="1"
+                            stroke="hsl(35,90%,83%)"
+                            class="loader__sand-line-right"
+                            ></line>
+
+                            <g stroke-width="0" fill="hsl(35,90%,90%)">
+                            <path
+                                d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z"
+                                clip-path="url(#sand-mound-top)"
+                            ></path>
+                            <path
+                                d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z"
+                                clip-path="url(#sand-mound-bottom)"
+                            ></path>
+                            </g>
+                        </g>
+
+                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+                            <path
+                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
+                            stroke="hsl(0,0%,100%)"
+                            class="loader__glare-top"
+                            ></path>
+                            <path
+                            transform="rotate(180,12.25,16.75)"
+                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
+                            stroke="hsla(0,0%,100%,0)"
+                            class="loader__glare-bottom"
+                            ></path>
+                        </g>
+
+                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect
+                            height="1"
+                            width="19.5"
+                            y="0.5"
+                            x="2.5"
+                            ry="0.5"
+                            rx="0.5"
+                            fill="hsl(var(--hue),90%,57.5%)"
+                        ></rect>
+                        <rect
+                            height="2"
+                            width="24.5"
+                            y="31.5"
+                            fill="hsl(var(--hue),90%,50%)"
+                        ></rect>
+                        <rect
+                            height="1"
+                            width="19.5"
+                            y="32"
+                            x="2.5"
+                            ry="0.5"
+                            rx="0.5"
+                            fill="hsl(var(--hue),90%,57.5%)"
+                        ></rect>
+                        </g>
+                    </g>
+                    </svg>
+
                 <div class="text">
                     <h4><span>Product Disign</span></h4>
 
-                    <h3><a href="#">Website Makeup Disign</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Doloribus commodi ab 
-                         cupiditate.</p>
+                    <h3><a href="#">Website  Disign</a></h3>
+                    <p>This website will be shut down soon.</p>
                          <a href="#" class="link"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
@@ -178,16 +354,186 @@
 
              
              <div class="project_box project_box2">
-                <img src="img/project4.jpg" alt="">
+                  <!-- From Uiverse.io by nima-mollazadeh --> 
+                    <svg
+                    aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
+                    role="img"
+                    height="56px"
+                    width="56px"
+                    viewBox="0 0 56 56"
+                    class="loader"
+                    >
+                    <clipPath id="sand-mound-top">
+                        <path
+                        d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z"
+                        class="loader__sand-mound-top"
+                        ></path>
+                    </clipPath>
+                    <clipPath id="sand-mound-bottom">
+                        <path
+                        d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z"
+                        class="loader__sand-mound-bottom"
+                        ></path>
+                    </clipPath>
+                    <g transform="translate(2,2)">
+                        <g
+                        transform="rotate(-90,26,26)"
+                        stroke-linecap="round"
+                        stroke-dashoffset="153.94"
+                        stroke-dasharray="153.94 153.94"
+                        stroke="hsl(0,0%,100%)"
+                        fill="none"
+                        >
+                        <circle
+                            transform="rotate(0,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="2.5"
+                            class="loader__motion-thick"
+                        ></circle>
+                        <circle
+                            transform="rotate(90,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="1.75"
+                            class="loader__motion-medium"
+                        ></circle>
+                        <circle
+                            transform="rotate(180,26,26)"
+                            r="24.5"
+                            cy="26"
+                            cx="26"
+                            stroke-width="1"
+                            class="loader__motion-thin"
+                        ></circle>
+                        </g>
+                        <g transform="translate(13.75,9.25)" class="loader__model">
+                        <path
+                            d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z"
+                            fill="hsl(var(--hue),90%,85%)"
+                        ></path>
+
+                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
+                            <line
+                            y2="20.75"
+                            x2="12"
+                            y1="15.75"
+                            x1="12"
+                            stroke-dasharray="0.25 33.75"
+                            stroke-width="1"
+                            class="loader__sand-grain-left"
+                            ></line>
+                            <line
+                            y2="21.75"
+                            x2="12.5"
+                            y1="16.75"
+                            x1="12.5"
+                            stroke-dasharray="0.25 33.75"
+                            stroke-width="1"
+                            class="loader__sand-grain-right"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.25"
+                            y1="18"
+                            x1="12.25"
+                            stroke-dasharray="0.5 107.5"
+                            stroke-width="1"
+                            class="loader__sand-drop"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.25"
+                            y1="14.75"
+                            x1="12.25"
+                            stroke-dasharray="54 54"
+                            stroke-width="1.5"
+                            class="loader__sand-fill"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12"
+                            y1="16"
+                            x1="12"
+                            stroke-dasharray="1 107"
+                            stroke-width="1"
+                            stroke="hsl(35,90%,83%)"
+                            class="loader__sand-line-left"
+                            ></line>
+                            <line
+                            y2="31.5"
+                            x2="12.5"
+                            y1="16"
+                            x1="12.5"
+                            stroke-dasharray="12 96"
+                            stroke-width="1"
+                            stroke="hsl(35,90%,83%)"
+                            class="loader__sand-line-right"
+                            ></line>
+
+                            <g stroke-width="0" fill="hsl(35,90%,90%)">
+                            <path
+                                d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z"
+                                clip-path="url(#sand-mound-top)"
+                            ></path>
+                            <path
+                                d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z"
+                                clip-path="url(#sand-mound-bottom)"
+                            ></path>
+                            </g>
+                        </g>
+
+                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+                            <path
+                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
+                            stroke="hsl(0,0%,100%)"
+                            class="loader__glare-top"
+                            ></path>
+                            <path
+                            transform="rotate(180,12.25,16.75)"
+                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
+                            stroke="hsla(0,0%,100%,0)"
+                            class="loader__glare-bottom"
+                            ></path>
+                        </g>
+
+                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect
+                            height="1"
+                            width="19.5"
+                            y="0.5"
+                            x="2.5"
+                            ry="0.5"
+                            rx="0.5"
+                            fill="hsl(var(--hue),90%,57.5%)"
+                        ></rect>
+                        <rect
+                            height="2"
+                            width="24.5"
+                            y="31.5"
+                            fill="hsl(var(--hue),90%,50%)"
+                        ></rect>
+                        <rect
+                            height="1"
+                            width="19.5"
+                            y="32"
+                            x="2.5"
+                            ry="0.5"
+                            rx="0.5"
+                            fill="hsl(var(--hue),90%,57.5%)"
+                        ></rect>
+                        </g>
+                    </g>
+                    </svg>
+
                 <div class="text">
                     <h4><span>Product Disign</span></h4>
 
-                    <h3><a href="#">Website Makeup Disign</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Doloribus commodi ab 
-                         cupiditate.</p>
-                         <a href="#" class="link"><i class="fa-solid
-                            fa-arrow-up"></i></a>
+                    <h3><a href="#">Website  Disign</a></h3>
+                    <p>This website will be shut down soon.</p>
+                         <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
                 </div>
              </div>
         </div>
@@ -205,24 +551,24 @@
                 <div class="soial_contact">
                     <h2>Follow Me</h2>
                     <div class="links">
-                        <a href="#"><i class="fa-solid fa-envelope"></i>exame@gmail.com</a>
-                        <a href="#"><i class="fa-solid fa-phone"></i> 01097950833</a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="mailto:yousefgamer880@gmail.com"><i class="fa-solid fa-envelope"></i>exame@gmail.com</a>
+                        <a href="tel:01097950833"><i class="fa-solid fa-phone"></i> 01097950833</a>
+                        <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                        <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"  ></i>Twitter</a>
+                        <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>Instagram</a>
                     </div>
                 </div>
 
 
-                <form action="">
+                <form method="post" action="https://api.sheetmonkey.io/form/vh2tR4gb5udv3K9wfQQ1D7">
                 <div class="inpts_form">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Mobile Number">
-                    <input type="text" placeholder="Subject">
-                    <textarea name="" id="" rows="10" placeholder="Your Message Here ..."></textarea>
+                    <input type="text" placeholder="Full Name" name = "Name"  required >
+                    <input type="email" placeholder="Email" name = "Email" required>
+                    <input type="number" placeholder="Mobile Number" name = "Phone" required>
+                    <input type="text" placeholder="Subject" name = "Subject" required>
+                    <textarea  name="Message" id="" rows="10" placeholder="Your Message Here ..." required></textarea>
                 </div>
-                <button class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
             </div>
 
