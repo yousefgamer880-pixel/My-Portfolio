@@ -30,3 +30,11 @@ buttons.forEach(btn => {
             : "Read More";
     });
 });
+
+// dark mode
+if (!localStorage.getItem("theme")) {
+    
+        document.body.classList.add("light-mode");
+    }
+
+

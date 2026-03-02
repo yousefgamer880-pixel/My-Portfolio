@@ -16,6 +16,11 @@
     --border-color: rgba(255, 255, 255, 0.1);
 } */
 
+
+
+
+
+
 :root {
     --main-color: #00ff88;       
     --p_color: #94a3b8;          
@@ -23,18 +28,55 @@
     --white_color: #e2e8f0;
     --black_color: #020617;
     --border-color: rgba(148, 163, 184, 0.1);
+    --yousef-super-color: #131313;
+}
+body {
+    color: var(--white_color);
+    transition: background 0.4s ease, color 0.4s ease;
+    background: var(--yousef-super-color);
+    /* background: #131313; */
+
 }
 
 html{
     scroll-behavior: smooth;
 }
 
+/* light Mode */
 
+body.light-mode {
+    /* 1. اللون الأساسي: أرجواني ملكي (Royal Purple) - بيدي فخامة رهيبة */
+    --main-color: #6366f1;       
+    
+    /* 2. خلفية الموقع: "رمادي لؤلؤي" مائل للأبيض، مريح جداً للعين */
+    --bg-color: #f3f4f6;         
+    
+    /* 3. لون النصوص الأساسي: أزرق ليلى غامق جداً (شيك جداً بدل الأسود) */
+    --white_color: #111827;      
+    
+    /* 4. لون الفقرات: رمادي ناعم (Slate Gray) */
+    --p_color: #4b5563;          
+    
+    /* 5. لون العناصر (الكروت/القوائم): أبيض صريح عشان تنطق فوق الخلفية */
+    --black_color: #ffffff;      
 
+    /* 6. الحدود (Border): شفافة جداً عشان الـ Clean Look */
+    --border-color: rgba(99, 102, 241, 0.1);
 
-body{
-    background: #131313;
+    /* 7. السر الحقيقي: الـ Glass Shadow (الظل الزجاجي) */
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    background: radial-gradient(circle at top right, #fdfcfb 0%, #e2d1c3 100%);
+    /* أو تدرج أهدى: */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed; /* عشان الخلفية متتحركش وأنت بتعمل Scroll */
 }
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
+    border-bottom: 1px solid var(--border-color);
+}
+
+
 .container{
     width: 80%;
     margin: auto;
@@ -270,7 +312,7 @@ header nav .icons a:hover{
 }
 
 .hero .div_img{
-    width: 37%;
+    width: 32%;
     position: relative;
     border-radius: 0 0 500px 500px;
     overflow: hidden;
@@ -404,6 +446,7 @@ width: 40%;
 
 
 .projects .container{
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -412,6 +455,7 @@ width: 40%;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+    margin-top: 80px;
     gap: 220px;
 }
 .projects .project_box img{
@@ -463,6 +507,7 @@ width: 40%;
     flex-direction: row-reverse;
     line-height: 1.2;
 }
+
 
 /* From Uiverse.io by nima-mollazadeh */ 
 .loader {
@@ -798,7 +843,7 @@ width: 40%;
     padding: 20px;
     outline: none;
     background-color: var(--bg-color);
-    color: white;
+    color: var(--white_color);
     margin-bottom: 20px;
     border: 1px solid var(--border-color);
     transition: 0.3s;

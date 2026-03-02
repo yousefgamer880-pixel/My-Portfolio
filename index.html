@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portefolio | Yousef</title>
@@ -8,6 +8,27 @@
     <!-- File CSS -->
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const toggleBtn = document.getElementById("themeToggle");
+
+  toggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+  });
+
+});
+</script>
+
 <body>
     <div class="bg-lines">
         <span></span>
@@ -22,21 +43,22 @@
     </div>
     <header>
         <nav class="container">
-            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <a href="#" class="logo" data-aos="fade-down"  data-aos-delay="500"><img src="img/logo.png" alt=""></a>
             <div class="links" id="links">
                 <span class="close_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"></i></span>
 
                 <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                <a class="active" href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">services</a>
-                <a href="#projects">projects</a>
-                <a href="#contact">Contact</a>
+                <a class="active" href="#" data-aos="fade-left"  data-aos-delay="700">Home</a>
+                <a href="#about" data-aos="fade-down"  data-aos-delay="700">About</a>
+                <a href="#services" data-aos="fade-right"  data-aos-delay="700">services</a>
+                <a href="#projects" data-aos="fade-left"  data-aos-delay="700">projects</a>
+                <a href="#contact" data-aos="fade-down"  data-aos-delay="600">Contact</a>
+                <button id="themeToggle" data-aos="fade-up" data-aos-delay="900">Mode</button>
             </div>
             <div class="icons">
-                <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer" data-aos="fade-down"  data-aos-delay="500"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" data-aos="fade-up"  data-aos-delay="500"></i></a>
+                <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" data-aos="fade-down"  data-aos-delay="500"></i></a>
                 <span class="icons_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
 
             </div>
@@ -46,46 +68,46 @@
     <div class="hero">
         <div class="container">
             <div class="div_Text">
-                <h4>Hello, I'm </h4>
-                <h1><span>Yousef Elgendy.</span></h1>
-                <h2>Web Developer</h2>
-                <p>I'm a passionate web developer creating modern and responsive websites
+                <h4 data-aos="zoom-in"  data-aos-delay="700">Hello, I'm </h4>
+                <h1 data-aos="fade-left"  data-aos-delay="500"><span>Yousef Elgendy.</span></h1>
+                <h2 data-aos="fade-right"  data-aos-delay="400">Web Developer</h2>
+                <p data-aos="fade-up"  data-aos-delay="600">I'm a passionate web developer creating modern and responsive websites
                    that help businesses grow and individuals showcase their skills online.</p>
-                <div class="btns">
+                <div class="btns"  data-aos="fade-up"  data-aos-delay="900">
                     <a href="#" class="btn">Hire Me</a>
                     <a href="pdf/cv_template_15.pdf" class="btn_no_bg" download="">Download CV</a>
                 </div>      
             </div>
-            <div class="div_img">
-                <img class="person" src="img/home.png" alt="">
-                <img class="bg_img" src="img/bg_img_home.png" alt="">
+            <div class="div_img" data-aos="zoom-in"  data-aos-delay="900">
+                <img class="person" src="img/home.png" alt="" data-aos="fade-left"  data-aos-delay="900">
+                <img class="bg_img" src="img/bg_img_home.png" alt="" data-aos="fade-right"  data-aos-delay="900">
             </div>
     </div>
 
     <section class="about" id="about">
-        <div class="container">
+        <div class="container" data-aos="zoom-in"  data-aos-delay="100" >
             <div class="div_text">
-                <h5>about me</h5>
+                <h5 data-aos="fade-left"  data-aos-delay="900">about me</h5>
 
-                <h2><span>I'm a Developer</span></h2>
-                <h4>I Build Responsive Websites and Digital Experiences</h4>
-                <p>My goal is to transform ideas into fully functional websites with
+                <h2 data-aos="fade-right"  data-aos-delay="1000"><span>I'm a Developer</span></h2>
+                <h4 data-aos="fade-down"  data-aos-delay="600">I Build Responsive Websites and Digital Experiences</h4>
+                <p data-aos="fade-up"  data-aos-delay="1100">My goal is to transform ideas into fully functional websites with
                      clean code and modern design standards.
                     </p>
              <ul>
-                <li><i class="fa-solid fa-check"></i> Front-End Development</li>
+                <li data-aos="fade-left"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Front-End Development</li>
 
-                <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                <li data-aos="fade-right"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> UI/UX Design</li>
 
-                <li><i class="fa-solid fa-check"></i> Responsive Web Design</li>
+                <li data-aos="fade-down"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Responsive Web Design</li>
 
-                <li><i class="fa-solid fa-check"></i> Custom Web Solutions</li>
+                <li data-aos="fade-up"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Custom Web Solutions</li>
             </ul>  
             
-            <a href="pdf/cv_template_15.pdf" class="btn" download="">Download CV</a>
+            <a href="pdf/cv_template_15.pdf" class="btn" download="" data-aos="fade-down"  data-aos-delay="1200">Download CV</a>
             </div>
             <div class="div_img1">
-                <img src="img/about.png" alt="">
+                <img src="img/about.png" alt="" data-aos="fade-left"  data-aos-delay="100">
             </div>
         </div>
     </section>
@@ -94,11 +116,11 @@
     <section class="services" id="services">
         <div class="container">
             <div class="top_section">
-                <h2>Our <span>Services</span></h2>
+                <h2 data-aos="fade-left"  data-aos-delay="900">Our <span >Services</span></h2>
             </div>
 
-            <div class="boxs">
-                <div class="box">
+            <div class="boxs" >
+                <div class="box"  data-aos="fade-up" data-aos-delay="600">
                     <i class="fa-solid fa-pen-ruler"></i>
                     <h3>Web Design</h3>
                     <p>I create visually appealing websites with responsive layouts and... 
@@ -111,7 +133,7 @@
 
                  </div>
                 
-                <div class="box">
+                <div class="box" data-aos="fade-down" data-aos-delay="900">
                     <i class="fa-solid fa-rocket"></i>
                     <h3>Web Design</h3>
                     <p>I build fast and scalable web applications using modern technologies,...
@@ -122,7 +144,7 @@
                     <button class="read-more-btn btn" >Read More</button>
                 </div>
 
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-delay="1100">
                     <i class="fa-solid fa-code"></i>
                     <h3>Web Design</h3>
                     <p>Custom coding solutions for unique requirements, from interactive features to...
@@ -139,37 +161,37 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="top_section">
-                <h2>Explore my popular <span>Projects</span></h2>
+                <h2 data-aos="fade-right" data-aos-delay="100">Explore my popular <span>Projects</span></h2>
             </div>
             <!-- project -->
              <div class="project_box border">
-                <img src="img/project1.png" alt="">
+                <img src="img/project1.png" alt="" data-aos="fade-right" data-aos-delay="500">
                 <div class="text">
-                    <h4><span>Product Design</span></h4>
+                    <h4 data-aos="fade-down" data-aos-delay="600"><span>Product Design</span></h4>
 
-                    <h3><a href="Loging/index.html">Website Login/Register Design</a></h3>
-                    <p>A sleek and responsive login interface that combines modern design with intuitive usability,
+                    <h3 data-aos="fade-left" data-aos-delay="500"><a href="Loging/index.html" >Website Login/Register Design</a></h3>
+                    <p data-aos="fade-up" data-aos-delay="800">A sleek and responsive login interface that combines modern design with intuitive usability,
                          allowing users to securely access their accounts with ease and confidence.</p>
-                         <a href="Loging/index.html" class="link"><i class="fa-solid
+                         <a href="Loging/index.html" class="link" data-aos="fade-down" data-aos-delay="1100"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
              </div>
 
              <div class="project_box project_box2 border">
-                <img src="img/Landing.png" alt="">
+                <img src="img/Landing.png" alt=""data-aos="fade-left" data-aos-delay="800">
                 <div class="text">
-                    <h4><span>Product Design</span></h4>
+                    <h4 data-aos="fade-right" data-aos-delay="100"><span>Product Design</span></h4>
 
-                    <h3><a href="Landing Page/index.html">Website Landing page Design</a></h3>
-                    <p>A simple landing page will be developed soon.</p>
-                         <a href="Landing Page/index.html" class="link"><i class="fa-solid
+                    <h3 data-aos="fade-right" data-aos-delay="500"><a href="Landing Page/index.html" >Website Landing page Design</a></h3>
+                    <p data-aos="fade-left" data-aos-delay="700">A simple landing page will be developed soon.</p>
+                         <a href="Landing Page/index.html" class="link" data-aos="fade-up" data-aos-delay="1000"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
              </div>
 
              <div class="project_box">
                 <!-- From Uiverse.io by nima-mollazadeh --> 
-                    <svg
+                    <svg data-aos="fade-right" data-aos-delay="600"
                     aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
                     role="img"
                     height="56px"
@@ -343,11 +365,11 @@
                     </svg>
 
                 <div class="text">
-                    <h4><span>Product Design</span></h4>
+                    <h4 data-aos="fade-down" data-aos-delay="800"><span>Product Design</span></h4>
 
-                    <h3><a href="#">Website Design</a></h3>
-                    <p>This website will be created soon.</p>
-                         <a href="#" class="link"><i class="fa-solid
+                    <h3 data-aos="fade-left" data-aos-delay="90000"><a href="#">Website Design</a></h3>
+                    <p data-aos="fade-up" data-aos-delay="1200">This website will be created soon.</p>
+                         <a href="#" class="link" data-aos="fade-down" data-aos-delay="1500"><i class="fa-solid
                             fa-arrow-up"></i></a>
                 </div>
              </div>
@@ -355,7 +377,7 @@
              
              <div class="project_box project_box2">
                   <!-- From Uiverse.io by nima-mollazadeh --> 
-                    <svg
+                    <svg data-aos="fade-left" data-aos-delay="900"
                     aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
                     role="img"
                     height="56px"
@@ -529,11 +551,11 @@
                     </svg>
 
                 <div class="text">
-                    <h4><span>Product Disign</span></h4>
+                    <h4 data-aos="fade-zoom-in" data-aos-delay="600"><span>Product Design</span></h4>
 
-                    <h3><a href="#">Website Disign</a></h3>
-                    <p>This website will be created soon.</p>
-                         <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    <h3 data-aos="fade-right" data-aos-delay="1100"><a href="#">Website Design</a></h3>
+                    <p data-aos="fade-down" data-aos-delay="1200">This website will be created soon.</p>
+                         <a href="#" class="link" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-arrow-up"></i></a>
                 </div>
              </div>
         </div>
@@ -544,31 +566,31 @@
 
     <section class="contact" id="contact">
         <div class="top_section">
-                <h2>Contact <span>Me</span></h2>
+                <h2 data-aos="fade-left " data-aos-delay="900">Contact <span>Me</span></h2>
             </div>
 
             <div class="container">
                 <div class="soial_contact">
-                    <h2>Follow Me</h2>
+                    <h2 data-aos="fade-down" data-aos-delay="900">Follow Me</h2>
                     <div class="links">
-                        <a href="mailto:yousefgamer880@gmail.com"><i class="fa-solid fa-envelope"></i>exame@gmail.com</a>
-                        <a href="tel:01097950833"><i class="fa-solid fa-phone"></i> 01097950833</a>
-                        <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                        <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"  ></i>Twitter</a>
-                        <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="mailto:yousefgamer880@gmail.com" data-aos="fade-right" data-aos-delay="900"><i class="fa-solid fa-envelope" ></i>exame@gmail.com</a>
+                        <a href="tel:01097950833" data-aos="fade-left" data-aos-delay="1000"><i class="fa-solid fa-phone" ></i> 01097950833</a>
+                        <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                        <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer" data-aos="fade-down" data-aos-delay="1500"><i class="fa-brands fa-twitter" ></i>Twitter</a>
+                        <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="1300"><i class="fa-brands fa-instagram" ></i>Instagram</a>
                     </div>
                 </div>
 
 
                 <form method="post" action="https://api.sheetmonkey.io/form/vh2tR4gb5udv3K9wfQQ1D7">
                 <div class="inpts_form">
-                    <input type="text" placeholder="Full Name" name = "Name"  required >
-                    <input type="email" placeholder="Email" name = "Email" required>
-                    <input type="number" placeholder="Mobile Number" name = "Phone" required>
-                    <input type="text" placeholder="Subject" name = "Subject" required>
-                    <textarea  name="Message" id="" rows="10" placeholder="Your Message Here ..." required></textarea>
+                    <input type="text" placeholder="Full Name" name = "Name"  required data-aos="fade-right" data-aos-delay="1800">
+                    <input type="email" placeholder="Email" name = "Email" required data-aos="fade-left" data-aos-delay="1900">
+                    <input type="number" placeholder="Mobile Number" name = "Phone" required data-aos="fade-up" data-aos-delay="2000">
+                    <input type="text" placeholder="Subject" name = "Subject" required data-aos="fade-down" data-aos-delay="2100">
+                    <textarea  name="Message" id="" rows="10" placeholder="Your Message Here ..." required  data-aos="zoom-in" data-aos-delay="2200"></textarea>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn" data-aos="fade-up" data-aos-delay="2300">Send Message</button>
             </form>
             </div>
 
@@ -578,5 +600,13 @@
 
 
     <script src="js/min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 1500, // مدة الحركة بالملي ثانية (هنا ثانية واحدة)
+    once: true,     // الحركة تحصل مرة واحدة فقط وأنت نازل (مش كل ما تطلع وتنزل)
+  });
+</script>
 </body>
 </html>
