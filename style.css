@@ -70,11 +70,6 @@ body.light-mode {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     background-attachment: fixed; /* عشان الخلفية متتحركش وأنت بتعمل Scroll */
 }
-body.light-mode nav {
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
-    border-bottom: 1px solid var(--border-color);
-}
 
 
 .container{
