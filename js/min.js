@@ -32,9 +32,27 @@ buttons.forEach(btn => {
 });
 
 // dark mode
-if (!localStorage.getItem("theme")) {
-    
-        document.body.classList.add("light-mode");
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const toggleInput = document.getElementById("themeToggle");
+
+  // استرجاع الثيم المحفوظ
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    toggleInput.checked = true; // نخلي السويتش متزامن
+  }
+
+  toggleInput.addEventListener("change", function () {
+
+    if (this.checked) {
+      document.body.classList.add("light-mode");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.remove("light-mode");
+      localStorage.setItem("theme", "dark");
     }
 
+  });
 
+});
