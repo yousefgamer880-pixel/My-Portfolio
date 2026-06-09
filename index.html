@@ -1,623 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portefolio | Yousef</title>
+    <title>Yousef Elgendy | Web Developer</title>
     <link rel="icon" href="img/icon.png">
-    <!-- File CSS -->
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader-ring"></div>
+</div>
+
+
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Background Lines -->
+<div class="bg-lines">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Floating Social Sidebar -->
+<div class="floating-social">
+    <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://x.com/yousef_gam13299" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.instagram.com/yousefelgendyg3/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="mailto:yousefgamer880@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+</div>
+
+<!-- Header -->
+<header class="glass-nav" id="header">
+    <nav class="container">
+        <a href="#" class="logo" data-aos="fade-down" data-aos-delay="300"><img src="img/logo.png" alt="Yousef Elgendy"></a>
+        <div class="links" id="links">
+            <span class="close_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"></i></span>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <a class="active" href="#home" data-aos="fade-left" data-aos-delay="400">Home</a>
+            <a href="#about" data-aos="fade-down" data-aos-delay="400">About</a>
+            <a href="#services" data-aos="fade-right" data-aos-delay="400">Services</a>
+            <a href="#projects" data-aos="fade-left" data-aos-delay="400">Projects</a>
+            <a href="#contact" data-aos="fade-down" data-aos-delay="400">Contact</a>
+        </div>
+        <div class="icons">
+            <label class="switch" data-aos="fade-down" data-aos-delay="300">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1-.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-.75.29zm-12.02 12.02a1 1 0 0 1-.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1-.7.24zm6.36-14.36a1 1 0 0 1-1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1-1 1zm0 17a1 1 0 0 1-1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1-1 1zm-5.66-14.66a1 1 0 0 1-.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-.71.29zm12.02 12.02a1 1 0 0 1-.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-.71.24z"></path></g></svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
+                <input type="checkbox" class="input" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="icons_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="div_Text">
+            <h4 data-aos="zoom-in" data-aos-delay="500">Hello, I'm</h4>
+            <h1 data-aos="fade-left" data-aos-delay="400"><span>Yousef Elgendy.</span></h1>
+            <h2 data-aos="fade-right" data-aos-delay="300">I'm a <span id="typed-text"></span></h2>
+            <p data-aos="fade-up" data-aos-delay="500">I'm a passionate web developer creating modern and responsive websites that help businesses grow and individuals showcase their skills online.</p>
+            <div class="btns" data-aos="fade-up" data-aos-delay="700">
+                <a href="#contact" class="btn">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="pdf/cv_template_15.pdf" class="btn_no_bg" download="">Download CV <i class="fa-solid fa-download"></i></a>
+            </div>
+        </div>
+        <div class="div_img" data-aos="zoom-in" data-aos-delay="700">
+            <img class="person" src="img/home.png" alt="Yousef Elgendy">
+            <img class="bg_img" src="img/bg_img_home.png" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <div class="div_text">
+            <h5 data-aos="fade-left" data-aos-delay="500">About Me</h5>
+            <h2 data-aos="fade-right" data-aos-delay="600"><span>I'm a Developer</span></h2>
+            <h4 data-aos="fade-down" data-aos-delay="400">I Build Responsive Websites and Digital Experiences</h4>
+            <p data-aos="fade-up" data-aos-delay="700">My goal is to transform ideas into fully functional websites with clean code and modern design standards.</p>
+            <ul>
+                <li data-aos="fade-left" data-aos-delay="800"><i class="fa-solid fa-check"></i> Front-End Development</li>
+                <li data-aos="fade-right" data-aos-delay="800"><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                <li data-aos="fade-down" data-aos-delay="800"><i class="fa-solid fa-check"></i> Responsive Web Design</li>
+                <li data-aos="fade-up" data-aos-delay="800"><i class="fa-solid fa-check"></i> Custom Web Solutions</li>
+            </ul>
+            <!-- Skill Bars -->
+            <div class="skill-bars" data-aos="fade-up" data-aos-delay="900">
+                <div class="skill-bar">
+                    <div class="skill-info"><span>HTML & CSS</span><span>95%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>React & Frameworks</span><span>75%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>UI/UX Design</span><span>80%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-width="80"></div></div>
+                </div>
+            </div>
+            <a href="pdf/cv_template_15.pdf" class="btn" download="" data-aos="fade-down" data-aos-delay="1000">Download CV <i class="fa-solid fa-download"></i></a>
+        </div>
+        <div class="div_img1">
+            <img src="img/about.png" alt="About Yousef" data-aos="fade-left" data-aos-delay="100">
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="top_section">
+            <h2 data-aos="fade-left" data-aos-delay="500">Our <span>Services</span></h2>
+        </div>
+        <div class="boxs">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h3>Front-End Development</h3>
+                <p>I create visually appealing websites with responsive layouts and... <span class="text_more">intuitive navigation, ensuring a seamless experience across all devices.</span></p>
+                <button class="read-more-btn btn">Read More</button>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>UI/UX Design</h3>
+                <p>I build fast and scalable web applications using modern technologies,... <span class="text_more">tailored to meet business needs and user expectations.</span></p>
+                <button class="read-more-btn btn">Read More</button>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Optimization</h3>
+                <p>Custom coding solutions for unique requirements, from interactive features to... <span class="text_more">backend integrations, all optimized for performance.</span></p>
+                <button class="read-more-btn btn">Read More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="top_section">
+            <h2 data-aos="fade-right" data-aos-delay="100">Explore my popular <span>Projects</span></h2>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/project1.png" alt="Login/Register Design" data-aos="fade-right" data-aos-delay="400">
+            <div class="text">
+                <h4 data-aos="fade-down" data-aos-delay="500"><span>Product Design</span></h4>
+                <h3 data-aos="fade-left" data-aos-delay="400"><a href="Loging/index.html">Website Login/Register Design</a></h3>
+                <p data-aos="fade-up" data-aos-delay="600">A sleek and responsive login interface that combines modern design with intuitive usability, allowing users to securely access their accounts with ease and confidence.</p>
+                <a href="Loging/index.html" class="link" data-aos="fade-down" data-aos-delay="800"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card project-card2" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/Landing.png" alt="Landing Page Design" data-aos="fade-left" data-aos-delay="400">
+            <div class="text">
+                <h4 data-aos="fade-right" data-aos-delay="100"><span>Product Design</span></h4>
+                <h3 data-aos="fade-right" data-aos-delay="400"><a href="Landing Page/index.html">Website Landing Page Design</a></h3>
+                <p data-aos="fade-left" data-aos-delay="600">A simple landing page will be developed soon.</p>
+                <a href="Landing Page/index.html" class="link" data-aos="fade-up" data-aos-delay="800"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <svg aria-label="loader" role="img" height="56px" width="56px" viewBox="0 0 56 56" class="loader" data-aos="fade-right" data-aos-delay="400">
+                <clipPath id="sand-mound-top"><path d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z" class="loader__sand-mound-top"></path></clipPath>
+                <clipPath id="sand-mound-bottom"><path d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z" class="loader__sand-mound-bottom"></path></clipPath>
+                <g transform="translate(2,2)">
+                    <g transform="rotate(-90,26,26)" stroke-linecap="round" stroke-dashoffset="153.94" stroke-dasharray="153.94 153.94" stroke="hsl(0,0%,100%)" fill="none">
+                        <circle transform="rotate(0,26,26)" r="24.5" cy="26" cx="26" stroke-width="2.5" class="loader__motion-thick"></circle>
+                        <circle transform="rotate(90,26,26)" r="24.5" cy="26" cx="26" stroke-width="1.75" class="loader__motion-medium"></circle>
+                        <circle transform="rotate(180,26,26)" r="24.5" cy="26" cx="26" stroke-width="1" class="loader__motion-thin"></circle>
+                    </g>
+                    <g transform="translate(13.75,9.25)" class="loader__model">
+                        <path d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z" fill="hsl(var(--hue),90%,85%)"></path>
+                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
+                            <line y2="20.75" x2="12" y1="15.75" x1="12" stroke-dasharray="0.25 33.75" stroke-width="1" class="loader__sand-grain-left"></line>
+                            <line y2="21.75" x2="12.5" y1="16.75" x1="12.5" stroke-dasharray="0.25 33.75" stroke-width="1" class="loader__sand-grain-right"></line>
+                            <line y2="31.5" x2="12.25" y1="18" x1="12.25" stroke-dasharray="0.5 107.5" stroke-width="1" class="loader__sand-drop"></line>
+                            <line y2="31.5" x2="12.25" y1="14.75" x1="12.25" stroke-dasharray="54 54" stroke-width="1.5" class="loader__sand-fill"></line>
+                            <line y2="31.5" x2="12" y1="16" x1="12" stroke-dasharray="1 107" stroke-width="1" stroke="hsl(35,90%,83%)" class="loader__sand-line-left"></line>
+                            <line y2="31.5" x2="12.5" y1="16" x1="12.5" stroke-dasharray="12 96" stroke-width="1" stroke="hsl(35,90%,83%)" class="loader__sand-line-right"></line>
+                            <g stroke-width="0" fill="hsl(35,90%,90%)">
+                                <path d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z" clip-path="url(#sand-mound-top)"></path>
+                                <path d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z" clip-path="url(#sand-mound-bottom)"></path>
+                            </g>
+                        </g>
+                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+                            <path d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5" stroke="hsl(0,0%,100%)" class="loader__glare-top"></path>
+                            <path transform="rotate(180,12.25,16.75)" d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5" stroke="hsla(0,0%,100%,0)" class="loader__glare-bottom"></path>
+                        </g>
+                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect height="1" width="19.5" y="0.5" x="2.5" ry="0.5" rx="0.5" fill="hsl(var(--hue),90%,57.5%)"></rect>
+                        <rect height="2" width="24.5" y="31.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect height="1" width="19.5" y="32" x="2.5" ry="0.5" rx="0.5" fill="hsl(var(--hue),90%,57.5%)"></rect>
+                    </g>
+                </g>
+            </svg>
+            <div class="text">
+                <h4 data-aos="fade-down" data-aos-delay="500"><span>Product Design</span></h4>
+                <h3 data-aos="fade-left" data-aos-delay="700"><a href="#">Website Design</a></h3>
+                <p data-aos="fade-up" data-aos-delay="900">This website will be created soon.</p>
+                <a href="#" class="link" data-aos="fade-down" data-aos-delay="1100"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card project-card2" data-aos="fade-up" data-aos-delay="200">
+            <svg aria-label="loader" role="img" height="56px" width="56px" viewBox="0 0 56 56" class="loader" data-aos="fade-left" data-aos-delay="400">
+                <clipPath id="sand-mound-top-2"><path d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z" class="loader__sand-mound-top"></path></clipPath>
+                <clipPath id="sand-mound-bottom-2"><path d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z" class="loader__sand-mound-bottom"></path></clipPath>
+                <g transform="translate(2,2)">
+                    <g transform="rotate(-90,26,26)" stroke-linecap="round" stroke-dashoffset="153.94" stroke-dasharray="153.94 153.94" stroke="hsl(0,0%,100%)" fill="none">
+                        <circle transform="rotate(0,26,26)" r="24.5" cy="26" cx="26" stroke-width="2.5" class="loader__motion-thick"></circle>
+                        <circle transform="rotate(90,26,26)" r="24.5" cy="26" cx="26" stroke-width="1.75" class="loader__motion-medium"></circle>
+                        <circle transform="rotate(180,26,26)" r="24.5" cy="26" cx="26" stroke-width="1" class="loader__motion-thin"></circle>
+                    </g>
+                    <g transform="translate(13.75,9.25)" class="loader__model">
+                        <path d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z" fill="hsl(var(--hue),90%,85%)"></path>
+                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
+                            <line y2="20.75" x2="12" y1="15.75" x1="12" stroke-dasharray="0.25 33.75" stroke-width="1" class="loader__sand-grain-left"></line>
+                            <line y2="21.75" x2="12.5" y1="16.75" x1="12.5" stroke-dasharray="0.25 33.75" stroke-width="1" class="loader__sand-grain-right"></line>
+                            <line y2="31.5" x2="12.25" y1="18" x1="12.25" stroke-dasharray="0.5 107.5" stroke-width="1" class="loader__sand-drop"></line>
+                            <line y2="31.5" x2="12.25" y1="14.75" x1="12.25" stroke-dasharray="54 54" stroke-width="1.5" class="loader__sand-fill"></line>
+                            <line y2="31.5" x2="12" y1="16" x1="12" stroke-dasharray="1 107" stroke-width="1" stroke="hsl(35,90%,83%)" class="loader__sand-line-left"></line>
+                            <line y2="31.5" x2="12.5" y1="16" x1="12.5" stroke-dasharray="12 96" stroke-width="1" stroke="hsl(35,90%,83%)" class="loader__sand-line-right"></line>
+                            <g stroke-width="0" fill="hsl(35,90%,90%)">
+                                <path d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z" clip-path="url(#sand-mound-top-2)"></path>
+                                <path d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z" clip-path="url(#sand-mound-bottom-2)"></path>
+                            </g>
+                        </g>
+                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+                            <path d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5" stroke="hsl(0,0%,100%)" class="loader__glare-top"></path>
+                            <path transform="rotate(180,12.25,16.75)" d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5" stroke="hsla(0,0%,100%,0)" class="loader__glare-bottom"></path>
+                        </g>
+                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect height="1" width="19.5" y="0.5" x="2.5" ry="0.5" rx="0.5" fill="hsl(var(--hue),90%,57.5%)"></rect>
+                        <rect height="2" width="24.5" y="31.5" fill="hsl(var(--hue),90%,50%)"></rect>
+                        <rect height="1" width="19.5" y="32" x="2.5" ry="0.5" rx="0.5" fill="hsl(var(--hue),90%,57.5%)"></rect>
+                    </g>
+                </g>
+            </svg>
+            <div class="text">
+                <h4 data-aos="fade-zoom-in" data-aos-delay="400"><span>Product Design</span></h4>
+                <h3 data-aos="fade-right" data-aos-delay="700"><a href="#">Website Design</a></h3>
+                <p data-aos="fade-down" data-aos-delay="900">This website will be created soon.</p>
+                <a href="#" class="link" data-aos="fade-up" data-aos-delay="1100"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="top_section">
+        <h2 data-aos="fade-left" data-aos-delay="500">Contact <span>Me</span></h2>
+    </div>
+    <div class="container">
+        <div class="soial_contact">
+            <h2 data-aos="fade-down" data-aos-delay="500">Follow Me</h2>
+            <div class="links">
+                <a href="mailto:yousefgamer880@gmail.com" data-aos="fade-right" data-aos-delay="600"><i class="fa-solid fa-envelope"></i>exame@gmail.com</a>
+                <a href="tel:01097950833" data-aos="fade-left" data-aos-delay="700"><i class="fa-solid fa-phone"></i> 01097950833</a>
+                <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="800"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="https://x.com/yousef_gam13299" target="_blank" rel="noopener noreferrer" data-aos="fade-down" data-aos-delay="900"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                <a href="https://www.instagram.com/yousefelgendyg3/" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="1000"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            </div>
+        </div>
+        <form class="contact-form" method="post" action="https://api.sheetmonkey.io/form/vh2tR4gb5udv3K9wfQQ1D7">
+            <div class="inpts_form">
+                <input type="text" placeholder="Full Name" name="Name" required data-aos="fade-right" data-aos-delay="1100">
+                <input type="email" placeholder="Email" name="Email" required data-aos="fade-left" data-aos-delay="1200">
+                <input type="number" placeholder="Mobile Number" name="Phone" required data-aos="fade-up" data-aos-delay="1300">
+                <input type="text" placeholder="Subject" name="Subject" required data-aos="fade-down" data-aos-delay="1400">
+                <textarea name="Message" rows="6" placeholder="Your Message Here ..." required data-aos="zoom-in" data-aos-delay="1500"></textarea>
+            </div>
+            <button type="submit" class="btn" data-aos="fade-up" data-aos-delay="1600">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+</section>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+// Preloader
+setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 600);
 
-  const toggleBtn = document.getElementById("themeToggle");
+// AOS
+try { AOS.init({ duration: 1500, once: true }); } catch(e) {}
 
-  // استرجاع الثيم المحفوظ
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-  }
+// Custom Cursor
+document.body.style.cursor = 'none';
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+if (dot && outline) {
+    document.addEventListener('mousemove', (e) => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        outline.style.left = e.clientX + 'px';
+        outline.style.top = e.clientY + 'px';
+    });
+    document.querySelectorAll('a, button, .btn, .read-more-btn, .service-card, .project-card, input, textarea, .switch')
+        .forEach(el => {
+            el.addEventListener('mouseenter', () => { dot.classList.add('cursor-hover'); outline.style.transform = 'translate(-50%, -50%) scale(1.5)'; });
+            el.addEventListener('mouseleave', () => { dot.classList.remove('cursor-hover'); outline.style.transform = 'translate(-50%, -50%) scale(1)'; });
+        });
+}
 
-  toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
-      localStorage.setItem("theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
-    }
-  });
-
+try {
+// Scroll Progress
+const progressBar = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    progressBar.style.width = (winScroll / height) * 100 + '%';
 });
-</script>
+} catch(e) {}
 
-<body>
-    <div class="bg-lines">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo" data-aos="fade-down"  data-aos-delay="500"><img src="img/logo.png" alt=""></a>
-            <div class="links" id="links">
-                <span class="close_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"></i></span>
+try {
+// Particles
+const canvas = document.getElementById('particles-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+let mouseX = 0, mouseY = 0;
 
-                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                <a class="active" href="#" data-aos="fade-left"  data-aos-delay="700">Home</a>
-                <a href="#about" data-aos="fade-down"  data-aos-delay="700">About</a>
-                <a href="#services" data-aos="fade-right"  data-aos-delay="700">services</a>
-                <a href="#projects" data-aos="fade-left"  data-aos-delay="700">projects</a>
-                <a href="#contact" data-aos="fade-down"  data-aos-delay="600">Contact</a>
-                <!-- <button  id="themeToggle" data-aos="fade-up" data-aos-delay="900">Mode</button>  -->
-                 <label  class="switch" data-aos="fade-down"  data-aos-delay="500">
-  <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
-  <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
-  <input type="checkbox" class="input" id="themeToggle">
-  <span class="slider"></span>
-</label>
-            </div>
-            <div class="icons">
-                <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer" data-aos="fade-down"  data-aos-delay="500"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" data-aos="fade-up"  data-aos-delay="500"></i></a>
-                <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" data-aos="fade-down"  data-aos-delay="500"></i></a>
-                <span class="icons_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
-            </div>
-        </nav>
-    </header>
+class Particle {
+    constructor() { this.reset(); }
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random() * 0.5 + 0.1;
+    }
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        const dx = mouseX - this.x;
+        const dy = mouseY - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) { this.x -= dx * 0.02; this.y -= dy * 0.02; }
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+    }
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 255, 136, ${this.opacity})`;
+        ctx.fill();
+    }
+}
+for (let i = 0; i < 80; i++) particles.push(new Particle());
+document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.update(); p.draw(); });
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(0, 255, 136, ${0.08 * (1 - dist / 150)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+            }
+        }
+    }
+    requestAnimationFrame(animateParticles);
+}
+animateParticles();
+} catch(e) {}
 
-    <div class="hero">
-        <div class="container">
-            <div class="div_Text">
-                <h4 data-aos="zoom-in"  data-aos-delay="700">Hello, I'm </h4>
-                <h1 data-aos="fade-left"  data-aos-delay="500"><span>Yousef Elgendy.</span></h1>
-                <h2 data-aos="fade-right"  data-aos-delay="400">Web Developer</h2>
-                <p data-aos="fade-up"  data-aos-delay="600">I'm a passionate web developer creating modern and responsive websites
-                   that help businesses grow and individuals showcase their skills online.</p>
-                <div class="btns"  data-aos="fade-up"  data-aos-delay="900">
-                    <a href="#" class="btn">Hire Me</a>
-                    <a href="pdf/cv_template_15.pdf" class="btn_no_bg" download="">Download CV</a>
-                </div>      
-            </div>
-            <div class="div_img" data-aos="zoom-in"  data-aos-delay="900">
-                <img class="person" src="img/home.png" alt="" data-aos="fade-left"  data-aos-delay="900">
-                <img class="bg_img" src="img/bg_img_home.png" alt="" data-aos="fade-right"  data-aos-delay="900">
-            </div>
-    </div>
+try {
+// Typing Effect
+const typedElement = document.getElementById('typed-text');
+const words = ['Web Developer', 'UI/UX Designer', 'Front-End Developer', 'Full-Stack Developer', 'Creative Problem Solver'];
+let wordIndex = 0, charIndex = 0, isDeleting = false, isPaused = false;
+function typeEffect() {
+    const currentWord = words[wordIndex];
+    if (!isDeleting && charIndex <= currentWord.length) {
+        typedElement.textContent = currentWord.substring(0, charIndex);
+        charIndex++;
+        if (charIndex > currentWord.length) { isPaused = true; setTimeout(() => { isPaused = false; isDeleting = true; }, 3000); }
+    } else if (isDeleting && charIndex >= 0) {
+        typedElement.textContent = currentWord.substring(0, charIndex);
+        charIndex--;
+        if (charIndex < 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; charIndex = 0; }
+    }
+    if (!isPaused) setTimeout(typeEffect, isDeleting ? 40 : 90);
+}
+typeEffect();
+} catch(e) {}
 
-    <section class="about" id="about">
-        <div class="container" data-aos="zoom-in"  data-aos-delay="100" >
-            <div class="div_text">
-                <h5 data-aos="fade-left"  data-aos-delay="900">about me</h5>
+try {
+// Skill Bars Animation
+const skillFills = document.querySelectorAll('.skill-fill');
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.style.width = entry.target.dataset.width + '%'; }
+    });
+}, { threshold: 0.5 });
+skillFills.forEach(f => skillObserver.observe(f));
+} catch(e) {}
 
-                <h2 data-aos="fade-right"  data-aos-delay="1000"><span>I'm a Developer</span></h2>
-                <h4 data-aos="fade-down"  data-aos-delay="600">I Build Responsive Websites and Digital Experiences</h4>
-                <p data-aos="fade-up"  data-aos-delay="1100">My goal is to transform ideas into fully functional websites with
-                     clean code and modern design standards.
-                    </p>
-             <ul>
-                <li data-aos="fade-left"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Front-End Development</li>
+try {
+// Back to Top
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => { backBtn.classList.toggle('show', window.scrollY > 400); });
+backBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+} catch(e) {}
 
-                <li data-aos="fade-right"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> UI/UX Design</li>
-
-                <li data-aos="fade-down"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Responsive Web Design</li>
-
-                <li data-aos="fade-up"  data-aos-delay="1100"><i class="fa-solid fa-check"></i> Custom Web Solutions</li>
-            </ul>  
-            
-            <a href="pdf/cv_template_15.pdf" class="btn" download="" data-aos="fade-down"  data-aos-delay="1200">Download CV</a>
-            </div>
-            <div class="div_img1">
-                <img src="img/about.png" alt="" data-aos="fade-left"  data-aos-delay="100">
-            </div>
-        </div>
-    </section>
-
-
-    <section class="services" id="services">
-        <div class="container">
-            <div class="top_section">
-                <h2 data-aos="fade-left"  data-aos-delay="900">Our <span >Services</span></h2>
-            </div>
-
-            <div class="boxs" >
-                <div class="box"  data-aos="fade-up" data-aos-delay="600">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                    <h3>Front-End Development</h3>
-                    <p>I create visually appealing websites with responsive layouts and... 
-                    <span class="text_more">
-                    intuitive navigation,ensuring a seamless experience across all devices.
-                    </span>
-                    </p>
-                    <!-- <a href="#"  class="btn" >Read More</a> -->
-                    <button class="read-more-btn btn" >Read More</button>
-
-                 </div>
-                
-                <div class="box" data-aos="fade-down" data-aos-delay="900">
-                    <i class="fa-solid fa-rocket"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>I build fast and scalable web applications using modern technologies,...
-                         <span class="text_more">
-                            tailored to meet business needs and user expectations.
-                         </span>
-                        </p>
-                    <button class="read-more-btn btn" >Read More</button>
-                </div>
-
-                <div class="box" data-aos="fade-up" data-aos-delay="1100">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Web Optimization</h3>
-                    <p>Custom coding solutions for unique requirements, from interactive features to...
-                        <span class="text_more">
-                           backend integrations, all optimized for performance.
-                        </span> 
-                    </p>
-                    <button class="read-more-btn btn" >Read More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="top_section">
-                <h2 data-aos="fade-right" data-aos-delay="100">Explore my popular <span>Projects</span></h2>
-            </div>
-            <!-- project -->
-             <div class="project_box border">
-                <img src="img/project1.png" alt="" data-aos="fade-right" data-aos-delay="500">
-                <div class="text">
-                    <h4 data-aos="fade-down" data-aos-delay="600"><span>Product Design</span></h4>
-
-                    <h3 data-aos="fade-left" data-aos-delay="500"><a href="Loging/index.html" >Website Login/Register Design</a></h3>
-                    <p data-aos="fade-up" data-aos-delay="800">A sleek and responsive login interface that combines modern design with intuitive usability,
-                         allowing users to securely access their accounts with ease and confidence.</p>
-                         <a href="Loging/index.html" class="link" data-aos="fade-down" data-aos-delay="1100"><i class="fa-solid
-                            fa-arrow-up"></i></a>
-                </div>
-             </div>
-
-             <div class="project_box project_box2 border">
-                <img src="img/Landing.png" alt=""data-aos="fade-left" data-aos-delay="800">
-                <div class="text">
-                    <h4 data-aos="fade-right" data-aos-delay="100"><span>Product Design</span></h4>
-
-                    <h3 data-aos="fade-right" data-aos-delay="500"><a href="Landing Page/index.html" >Website Landing page Design</a></h3>
-                    <p data-aos="fade-left" data-aos-delay="700">A simple landing page will be developed soon.</p>
-                         <a href="Landing Page/index.html" class="link" data-aos="fade-up" data-aos-delay="1000"><i class="fa-solid
-                            fa-arrow-up"></i></a>
-                </div>
-             </div>
-
-             <div class="project_box">
-                <!-- From Uiverse.io by nima-mollazadeh --> 
-                    <svg data-aos="fade-right" data-aos-delay="600"
-                    aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
-                    role="img"
-                    height="56px"
-                    width="56px"
-                    viewBox="0 0 56 56"
-                    class="loader"
-                    >
-                    <clipPath id="sand-mound-top">
-                        <path
-                        d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z"
-                        class="loader__sand-mound-top"
-                        ></path>
-                    </clipPath>
-                    <clipPath id="sand-mound-bottom">
-                        <path
-                        d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z"
-                        class="loader__sand-mound-bottom"
-                        ></path>
-                    </clipPath>
-                    <g transform="translate(2,2)">
-                        <g
-                        transform="rotate(-90,26,26)"
-                        stroke-linecap="round"
-                        stroke-dashoffset="153.94"
-                        stroke-dasharray="153.94 153.94"
-                        stroke="hsl(0,0%,100%)"
-                        fill="none"
-                        >
-                        <circle
-                            transform="rotate(0,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="2.5"
-                            class="loader__motion-thick"
-                        ></circle>
-                        <circle
-                            transform="rotate(90,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="1.75"
-                            class="loader__motion-medium"
-                        ></circle>
-                        <circle
-                            transform="rotate(180,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="1"
-                            class="loader__motion-thin"
-                        ></circle>
-                        </g>
-                        <g transform="translate(13.75,9.25)" class="loader__model">
-                        <path
-                            d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z"
-                            fill="hsl(var(--hue),90%,85%)"
-                        ></path>
-
-                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
-                            <line
-                            y2="20.75"
-                            x2="12"
-                            y1="15.75"
-                            x1="12"
-                            stroke-dasharray="0.25 33.75"
-                            stroke-width="1"
-                            class="loader__sand-grain-left"
-                            ></line>
-                            <line
-                            y2="21.75"
-                            x2="12.5"
-                            y1="16.75"
-                            x1="12.5"
-                            stroke-dasharray="0.25 33.75"
-                            stroke-width="1"
-                            class="loader__sand-grain-right"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.25"
-                            y1="18"
-                            x1="12.25"
-                            stroke-dasharray="0.5 107.5"
-                            stroke-width="1"
-                            class="loader__sand-drop"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.25"
-                            y1="14.75"
-                            x1="12.25"
-                            stroke-dasharray="54 54"
-                            stroke-width="1.5"
-                            class="loader__sand-fill"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12"
-                            y1="16"
-                            x1="12"
-                            stroke-dasharray="1 107"
-                            stroke-width="1"
-                            stroke="hsl(35,90%,83%)"
-                            class="loader__sand-line-left"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.5"
-                            y1="16"
-                            x1="12.5"
-                            stroke-dasharray="12 96"
-                            stroke-width="1"
-                            stroke="hsl(35,90%,83%)"
-                            class="loader__sand-line-right"
-                            ></line>
-
-                            <g stroke-width="0" fill="hsl(35,90%,90%)">
-                            <path
-                                d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z"
-                                clip-path="url(#sand-mound-top)"
-                            ></path>
-                            <path
-                                d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z"
-                                clip-path="url(#sand-mound-bottom)"
-                            ></path>
-                            </g>
-                        </g>
-
-                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
-                            <path
-                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
-                            stroke="hsl(0,0%,100%)"
-                            class="loader__glare-top"
-                            ></path>
-                            <path
-                            transform="rotate(180,12.25,16.75)"
-                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
-                            stroke="hsla(0,0%,100%,0)"
-                            class="loader__glare-bottom"
-                            ></path>
-                        </g>
-
-                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
-                        <rect
-                            height="1"
-                            width="19.5"
-                            y="0.5"
-                            x="2.5"
-                            ry="0.5"
-                            rx="0.5"
-                            fill="hsl(var(--hue),90%,57.5%)"
-                        ></rect>
-                        <rect
-                            height="2"
-                            width="24.5"
-                            y="31.5"
-                            fill="hsl(var(--hue),90%,50%)"
-                        ></rect>
-                        <rect
-                            height="1"
-                            width="19.5"
-                            y="32"
-                            x="2.5"
-                            ry="0.5"
-                            rx="0.5"
-                            fill="hsl(var(--hue),90%,57.5%)"
-                        ></rect>
-                        </g>
-                    </g>
-                    </svg>
-
-                <div class="text">
-                    <h4 data-aos="fade-down" data-aos-delay="800"><span>Product Design</span></h4>
-
-                    <h3 data-aos="fade-left" data-aos-delay="90000"><a href="#">Website Design</a></h3>
-                    <p data-aos="fade-up" data-aos-delay="1200">This website will be created soon.</p>
-                         <a href="#" class="link" data-aos="fade-down" data-aos-delay="1500"><i class="fa-solid
-                            fa-arrow-up"></i></a>
-                </div>
-             </div>
-
-             
-             <div class="project_box project_box2">
-                  <!-- From Uiverse.io by nima-mollazadeh --> 
-                    <svg data-aos="fade-left" data-aos-delay="900"
-                    aria-label="loader being flipped clockwise and circled by three white curves fading in and out"
-                    role="img"
-                    height="56px"
-                    width="56px"
-                    viewBox="0 0 56 56"
-                    class="loader"
-                    >
-                    <clipPath id="sand-mound-top">
-                        <path
-                        d="M 14.613 13.087 C 15.814 12.059 19.3 8.039 20.3 6.539 C 21.5 4.789 21.5 2.039 21.5 2.039 L 3 2.039 C 3 2.039 3 4.789 4.2 6.539 C 5.2 8.039 8.686 12.059 9.887 13.087 C 11 14.039 12.25 14.039 12.25 14.039 C 12.25 14.039 13.5 14.039 14.613 13.087 Z"
-                        class="loader__sand-mound-top"
-                        ></path>
-                    </clipPath>
-                    <clipPath id="sand-mound-bottom">
-                        <path
-                        d="M 14.613 20.452 C 15.814 21.48 19.3 25.5 20.3 27 C 21.5 28.75 21.5 31.5 21.5 31.5 L 3 31.5 C 3 31.5 3 28.75 4.2 27 C 5.2 25.5 8.686 21.48 9.887 20.452 C 11 19.5 12.25 19.5 12.25 19.5 C 12.25 19.5 13.5 19.5 14.613 20.452 Z"
-                        class="loader__sand-mound-bottom"
-                        ></path>
-                    </clipPath>
-                    <g transform="translate(2,2)">
-                        <g
-                        transform="rotate(-90,26,26)"
-                        stroke-linecap="round"
-                        stroke-dashoffset="153.94"
-                        stroke-dasharray="153.94 153.94"
-                        stroke="hsl(0,0%,100%)"
-                        fill="none"
-                        >
-                        <circle
-                            transform="rotate(0,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="2.5"
-                            class="loader__motion-thick"
-                        ></circle>
-                        <circle
-                            transform="rotate(90,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="1.75"
-                            class="loader__motion-medium"
-                        ></circle>
-                        <circle
-                            transform="rotate(180,26,26)"
-                            r="24.5"
-                            cy="26"
-                            cx="26"
-                            stroke-width="1"
-                            class="loader__motion-thin"
-                        ></circle>
-                        </g>
-                        <g transform="translate(13.75,9.25)" class="loader__model">
-                        <path
-                            d="M 1.5 2 L 23 2 C 23 2 22.5 8.5 19 12 C 16 15.5 13.5 13.5 13.5 16.75 C 13.5 20 16 18 19 21.5 C 22.5 25 23 31.5 23 31.5 L 1.5 31.5 C 1.5 31.5 2 25 5.5 21.5 C 8.5 18 11 20 11 16.75 C 11 13.5 8.5 15.5 5.5 12 C 2 8.5 1.5 2 1.5 2 Z"
-                            fill="hsl(var(--hue),90%,85%)"
-                        ></path>
-
-                        <g stroke-linecap="round" stroke="hsl(35,90%,90%)">
-                            <line
-                            y2="20.75"
-                            x2="12"
-                            y1="15.75"
-                            x1="12"
-                            stroke-dasharray="0.25 33.75"
-                            stroke-width="1"
-                            class="loader__sand-grain-left"
-                            ></line>
-                            <line
-                            y2="21.75"
-                            x2="12.5"
-                            y1="16.75"
-                            x1="12.5"
-                            stroke-dasharray="0.25 33.75"
-                            stroke-width="1"
-                            class="loader__sand-grain-right"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.25"
-                            y1="18"
-                            x1="12.25"
-                            stroke-dasharray="0.5 107.5"
-                            stroke-width="1"
-                            class="loader__sand-drop"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.25"
-                            y1="14.75"
-                            x1="12.25"
-                            stroke-dasharray="54 54"
-                            stroke-width="1.5"
-                            class="loader__sand-fill"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12"
-                            y1="16"
-                            x1="12"
-                            stroke-dasharray="1 107"
-                            stroke-width="1"
-                            stroke="hsl(35,90%,83%)"
-                            class="loader__sand-line-left"
-                            ></line>
-                            <line
-                            y2="31.5"
-                            x2="12.5"
-                            y1="16"
-                            x1="12.5"
-                            stroke-dasharray="12 96"
-                            stroke-width="1"
-                            stroke="hsl(35,90%,83%)"
-                            class="loader__sand-line-right"
-                            ></line>
-
-                            <g stroke-width="0" fill="hsl(35,90%,90%)">
-                            <path
-                                d="M 12.25 15 L 15.392 13.486 C 21.737 11.168 22.5 2 22.5 2 L 2 2.013 C 2 2.013 2.753 11.046 9.009 13.438 L 12.25 15 Z"
-                                clip-path="url(#sand-mound-top)"
-                            ></path>
-                            <path
-                                d="M 12.25 18.5 L 15.392 20.014 C 21.737 22.332 22.5 31.5 22.5 31.5 L 2 31.487 C 2 31.487 2.753 22.454 9.009 20.062 Z"
-                                clip-path="url(#sand-mound-bottom)"
-                            ></path>
-                            </g>
-                        </g>
-
-                        <g stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
-                            <path
-                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
-                            stroke="hsl(0,0%,100%)"
-                            class="loader__glare-top"
-                            ></path>
-                            <path
-                            transform="rotate(180,12.25,16.75)"
-                            d="M 19.437 3.421 C 19.437 3.421 19.671 6.454 17.914 8.846 C 16.157 11.238 14.5 11.5 14.5 11.5"
-                            stroke="hsla(0,0%,100%,0)"
-                            class="loader__glare-bottom"
-                            ></path>
-                        </g>
-
-                        <rect height="2" width="24.5" fill="hsl(var(--hue),90%,50%)"></rect>
-                        <rect
-                            height="1"
-                            width="19.5"
-                            y="0.5"
-                            x="2.5"
-                            ry="0.5"
-                            rx="0.5"
-                            fill="hsl(var(--hue),90%,57.5%)"
-                        ></rect>
-                        <rect
-                            height="2"
-                            width="24.5"
-                            y="31.5"
-                            fill="hsl(var(--hue),90%,50%)"
-                        ></rect>
-                        <rect
-                            height="1"
-                            width="19.5"
-                            y="32"
-                            x="2.5"
-                            ry="0.5"
-                            rx="0.5"
-                            fill="hsl(var(--hue),90%,57.5%)"
-                        ></rect>
-                        </g>
-                    </g>
-                    </svg>
-
-                <div class="text">
-                    <h4 data-aos="fade-zoom-in" data-aos-delay="600"><span>Product Design</span></h4>
-
-                    <h3 data-aos="fade-right" data-aos-delay="1100"><a href="#">Website Design</a></h3>
-                    <p data-aos="fade-down" data-aos-delay="1200">This website will be created soon.</p>
-                         <a href="#" class="link" data-aos="fade-up" data-aos-delay="1500"><i class="fa-solid fa-arrow-up"></i></a>
-                </div>
-             </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="contact" id="contact">
-        <div class="top_section">
-                <h2 data-aos="fade-left " data-aos-delay="900">Contact <span>Me</span></h2>
-            </div>
-
-            <div class="container">
-                <div class="soial_contact">
-                    <h2 data-aos="fade-down" data-aos-delay="900">Follow Me</h2>
-                    <div class="links">
-                        <a href="mailto:yousefgamer880@gmail.com" data-aos="fade-right" data-aos-delay="900"><i class="fa-solid fa-envelope" ></i>exame@gmail.com</a>
-                        <a href="tel:01097950833" data-aos="fade-left" data-aos-delay="1000"><i class="fa-solid fa-phone" ></i> 01097950833</a>
-                        <a href="https://web.facebook.com/yousef.elgendy.547066/directory_links"  target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
-                        <a href="https://x.com/yousef_gam13299"  target="_blank" rel="noopener noreferrer" data-aos="fade-down" data-aos-delay="1500"><i class="fa-brands fa-twitter" ></i>Twitter</a>
-                        <a href="https://www.instagram.com/yousefelgendyg3/"  target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="1300"><i class="fa-brands fa-instagram" ></i>Instagram</a>
-                    </div>
-                </div>
-
-
-                <form method="post" action="https://api.sheetmonkey.io/form/vh2tR4gb5udv3K9wfQQ1D7">
-                <div class="inpts_form">
-                    <input type="text" placeholder="Full Name" name = "Name"  required data-aos="fade-right" data-aos-delay="1800">
-                    <input type="email" placeholder="Email" name = "Email" required data-aos="fade-left" data-aos-delay="1900">
-                    <input type="number" placeholder="Mobile Number" name = "Phone" required data-aos="fade-up" data-aos-delay="2000">
-                    <input type="text" placeholder="Subject" name = "Subject" required data-aos="fade-down" data-aos-delay="2100">
-                    <textarea  name="Message" id="" rows="10" placeholder="Your Message Here ..." required  data-aos="zoom-in" data-aos-delay="2200"></textarea>
-                </div>
-                <button type="submit" class="btn" data-aos="fade-up" data-aos-delay="2300">Send Message</button>
-            </form>
-            </div>
-
-            
-
-    </section>
-
-
-    <script src="js/min.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  AOS.init({
-    duration: 1500, // مدة الحركة بالملي ثانية (هنا ثانية واحدة)
-    once: true,     // الحركة تحصل مرة واحدة فقط وأنت نازل (مش كل ما تطلع وتنزل)
-  });
+try {
+// Active Nav Link Highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.glass-nav .links a:not(.logo)');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { const top = s.offsetTop - 120; if (window.scrollY >= top) current = s.id; });
+    navLinks.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+});
+} catch(e) {}
 </script>
 </body>
 </html>
